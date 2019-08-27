@@ -152,8 +152,7 @@ void sysvid_setDisplayPalette(void)
 void sysvid_init(U16 width, U16 height)
 {
 	SDL_Surface *s;
-	U8 *mask, tpix;
-	U32 len, i;
+	U8 tpix;
 
 	fb_width = width;
 	fb_height = height;
@@ -311,10 +310,7 @@ sysvid_shutdown(void)
 void
 sysvid_update(rect_t *rects)
 {
-	SDL_Rect *sdlrects;
 	rect_t *rect;
-	U16 x, y, xx, yy;
-	U8 *src, *dst, *src0, *dst0;
 	U8 n;
 
 	if (rects == NULL) /* nothing to do? */

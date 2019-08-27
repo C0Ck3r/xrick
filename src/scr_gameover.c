@@ -37,10 +37,6 @@ screen_gameover(void)
 #ifdef GFXST
 	static U32 tm = 0;
 #endif
-#ifdef ENABLE_SOUND
-	static sound_t *snd;
-	static U8 chan;
-#endif
 
 	if (seq == 0) {
 		tiles_setBank(0);

@@ -97,7 +97,6 @@ void env_paintXtra(void)
 	S8 i;
 	U32 sv;
 	static U8 s[8] = {'M', 0x30, 0x30, TILES_CRLF, 'S', 0x30, 0x30, TILES_NULL};
-	static U8 c[8] = {'@', '@', '@', TILES_CRLF, '@', '@', '@', TILES_NULL};
 
 	tiles_setBank(0);
 
