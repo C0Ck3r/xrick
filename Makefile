@@ -53,7 +53,7 @@ INCLUDES	:=	include
 #---------------------------------------------------------------------------------
 ARCH	:=	-march=armv8-a+crc+crypto -mtune=cortex-a57 -mtp=soft -fPIE
 
-CFLAGS	:=	-g -Wall -O2 -ffunction-sections -fdiagnostics-color=always -Wno-unused-variable \
+CFLAGS	:=	-g -Wall -O2 -ffunction-sections -fdiagnostics-color=always \
 			$(ARCH) $(DEFINES)
 
 CFLAGS	+=	$(INCLUDE) -D__SWITCH__
@@ -161,9 +161,9 @@ $(BUILD):
 clean:
 	@echo clean ...
 ifeq ($(strip $(APP_JSON)),)
-	@rm -fr $(BUILD) $(TARGET).nro $(TARGET).nacp $(TARGET).elf
+	@rm -fr $(BUILD) $(TARGET).nro $(TARGET).nacp $(TARGET).elf $(TARGET).nso $(TARGET).pfs0 log.txt
 else
-	@rm -fr $(BUILD) $(TARGET).nsp $(TARGET).nso $(TARGET).npdm $(TARGET).elf
+	@rm -fr $(BUILD) $(TARGET).nsp $(TARGET).nso $(TARGET).npdm $(TARGET).elf 
 endif
 
 

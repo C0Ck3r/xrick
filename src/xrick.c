@@ -14,6 +14,7 @@
 #include "system.h"
 #include "sysarg.h"
 #include "sysvid.h"
+#include "syssnd.h"
 #include "game.h"
 #include "fb.h"
 
