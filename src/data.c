@@ -231,13 +231,13 @@ str_zipext(char *name)
 	int i;
 
 	i = strlen(name) - 1;
-	if (i < 0 || name[i] != 'p' && name[i] != 'P') return 0;
+	if ((i < 0 || (name[i] != 'p') && name[i] != 'P')) return 0;
 	i--;
-	if (i < 0 || name[i] != 'i' && name[i] != 'I') return 0;
+	if ((i < 0 || (name[i] != 'i') && name[i] != 'I')) return 0;
 	i--;
-	if (i < 0 || name[i] != 'z' && name[i] != 'Z') return 0;
+	if ((i < 0 || (name[i] != 'z') && name[i] != 'Z')) return 0;
 	i--;
-	if (i < 0 || name[i] != '.') return 0;
+	if ((i < 0) || (name[i] != '.')) return 0;
 	i--;
 	if (i < 0) return 0;
 	return 1;
